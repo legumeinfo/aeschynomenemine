@@ -1,0 +1,54 @@
+#!/bin/sh
+
+echo ""
+echo "##########################################################################################################################################"
+echo "##########################################################################################################################################"
+echo "##################################################### JOINTVETCHMINE INTEGRATE ###########################################################"
+echo "##########################################################################################################################################"
+echo "##########################################################################################################################################"
+echo ""
+
+## ontologies
+./gradlew integrate -Psource=so --stacktrace
+./gradlew integrate -Psource=go --stacktrace
+./gradlew integrate -Psource=plant-ontology --stacktrace
+./gradlew integrate -Psource=plant-trait-ontology --stacktrace
+
+## InterPro
+./gradlew integrate -Psource=interpro --stacktrace
+./gradlew integrate -Psource=interpro-go --stacktrace
+
+## LIS gene families and phylotree
+./gradlew integrate -Psource=lis.fam1-genefamily --stacktrace
+./gradlew integrate -Psource=lis.fam1-phylotree --stacktrace
+
+## about
+./gradlew integrate -Psource=aesev-about --stacktrace
+
+## chromosome-fasta
+./gradlew integrate -Psource=aesev.CIAT22838.gnm1-chromosome-fasta --stacktrace
+
+## cds-fasta
+./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-cds-fasta --stacktrace
+
+## mrna-fasta
+./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-mrna-fasta --stacktrace
+
+## protein-fasta
+./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-protein-fasta --stacktrace
+
+## info-annot
+#./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-info-annot --stacktrace
+
+## ann-gff
+./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-gff --stacktrace
+
+## ann-gfa
+./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-gfa --stacktrace
+
+## ann-pathway
+./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-pathway --stacktrace
+
+## ipr-gff
+./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-ipr-gff --stacktrace
+
