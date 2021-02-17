@@ -178,7 +178,7 @@
       <fieldconfig fieldExpr="ontologyTerm.identifier" label="Identifier"/>
       <fieldconfig fieldExpr="ontologyTerm.name" label="Term"/>
       <fieldconfig fieldExpr="ontologyTerm.description" label="Description"/>
-      <!-- <fieldconfig fieldExpr="subject.primaryIdentifier" label="Subject"/> -->
+      <fieldconfig fieldExpr="subject.primaryIdentifier" label="Subject"/>
     </fields>
   </class>
 
