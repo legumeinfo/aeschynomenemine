@@ -1,0 +1,21 @@
+#!/bin/sh
+
+MINENAME=jointvetchmine
+DBNAME=jointvetchmine-dev
+
+## add triggers
+./gradlew generateUpdateTriggers
+psql -f dbmodel/build/resources/main/add-update-triggers.sql ${DBNAME}
+
+## do updates
+cd ~/java/ncgr/intermine
+
+echo "########## cdsreferenceupdater ${MINENAME}"
+./cdsreferenceupdater $MINENAME
+
+echo "########## transcriptreferenceupdater $MINENAME"
+./transcriptreferenceupdater $MINENAME
+
+## remove triggers
+cd ~/$MINENAME
+psql -f dbmodel/build/resources/main/remove-update-triggers.sql ${DBNAME}

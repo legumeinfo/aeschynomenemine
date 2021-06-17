@@ -11,39 +11,32 @@ echo "##########################################################################
 echo ""
 
 ## IM CORE
-# ./gradlew postprocess -Pprocess=do-sources
-# ./gradlew postprocess -Pprocess=create-utr-references
-# ./gradlew postprocess -Pprocess=create-references
-# ./gradlew postprocess -Pprocess=make-spanning-locations
-# ./gradlew postprocess -Pprocess=create-chromosome-locations-and-lengths
-# ./gradlew postprocess -Pprocess=create-intergenic-region-features
-# ./gradlew postprocess -Pprocess=transfer-sequences
-# ./gradlew postprocess -Pprocess=populate-child-features
-# ./gradlew postprocess -Pprocess=create-gene-flanking-features
+# ./gradlew --stacktrace postprocess -Pprocess=do-sources
+# ./gradlew --stacktrace postprocess -Pprocess=create-utr-references
+# ./gradlew --stacktrace postprocess -Pprocess=create-references
+# ./gradlew --stacktrace postprocess -Pprocess=make-spanning-locations
+# ./gradlew --stacktrace postprocess -Pprocess=create-chromosome-locations-and-lengths
+# ./gradlew --stacktrace postprocess -Pprocess=create-intergenic-region-features
+# ./gradlew --stacktrace postprocess -Pprocess=transfer-sequences
+# ./gradlew --stacktrace postprocess -Pprocess=populate-child-features
+# ./gradlew --stacktrace postprocess -Pprocess=create-gene-flanking-features
 
 ## LIS GENOMIC
-# ./gradlew postprocess -Pprocess=lis-populate-cds-gene-references
-# ./gradlew postprocess -Pprocess=lis-populate-cds-protein-references
-# ./gradlew postprocess -Pprocess=lis-populate-cds-transcript-references
-# ./gradlew postprocess -Pprocess=lis-populate-gene-protein-collections
-# ./gradlew postprocess -Pprocess=lis-populate-transcript-gene-references
-# ./gradlew postprocess -Pprocess=lis-populate-transcript-protein-references
-# ./gradlew postprocess -Pprocess=lis-populate-protein-pathway-collections
+# ./gradlew --stacktrace postprocess -Pprocess=lis-populate-gene-protein-collections
+# ./gradlew --stacktrace postprocess -Pprocess=lis-populate-protein-pathway-collections
 
 ## LIS GENETIC
-# ./gradlew postprocess -Pprocess=lis-populate-qtl-gene-collections
+# ./gradlew --stacktrace postprocess -Pprocess=lis-populate-qtl-gene-collections
 
 ## LIS OTHER
-# ./gradlew postprocess -Pprocess=lis-populate-publications
+# ./gradlew --stacktrace postprocess -Pprocess=lis-populate-publications
 
 ## VIEWS AND INDEXES
-# ./gradlew postprocess -Pprocess=create-location-overlap-index
-# ./gradlew postprocess -Pprocess=create-overlap-view
-# ./gradlew postprocess -Pprocess=create-attribute-indexes
+# ./gradlew --stacktrace postprocess -Pprocess=create-location-overlap-index
+# ./gradlew --stacktrace postprocess -Pprocess=create-overlap-view
+# ./gradlew --stacktrace postprocess -Pprocess=create-attribute-indexes
 
 ## DO THIS AFTER EACH UPDATE
-./gradlew postprocess -Pprocess=summarise-objectstore
-
-## SOLR
-./gradlew postprocess -Pprocess=create-autocomplete-index
-./gradlew postprocess -Pprocess=create-search-index
+./gradlew --stacktrace postprocess -Pprocess=summarise-objectstore
+./gradlew --stacktrace postprocess -Pprocess=create-autocomplete-index
+./gradlew --stacktrace postprocess -Pprocess=create-search-index

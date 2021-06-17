@@ -5,21 +5,6 @@
   <property name="default.intermine.properties.file" location="../default.intermine.integrate.properties"/>
   <sources>
 
-    <!-- Gene_families/legume.genefam.fam1.M65K/ -->
-    <source name="lis.fam1-genefamily" type="lis-genefamily" dump="true">
-      <property name="data.set.url" value="https://legumeinfo.org/data/public/Gene_families/legume.genefam.fam1.M65K/"/>
-      <property name="data.set.description" value="LIS gene families"/>
-      <property name="desired.organisms" value="aradu araip arahy arath cajca cicar cucsa glyma glyso lotja lupan medtr phalu phavu prupe solly tripr vigan vigra vigun vitvi aesev"/>
-      <property name="src.data.dir" location="/data/LIS/Gene_families/legume.genefam.fam1.M65K"/>
-    </source>
-
-    <!-- Gene_families/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted/ -->
-    <source name="lis.fam1-phylotree" type="lis-phylotree" dump="true">
-      <property name="data.set.url" value="https://legumeinfo.org/data/public/Gene_families/legume.genefam.fam1.M65K/"/>
-      <property name="data.set.description" value="LIS gene family phylogenetic trees"/>
-      <property name="src.data.dir" location="/data/LIS/Gene_families/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted"/>
-    </source>
-
     <!-- ################### -->
     <!-- Aeschynomene evenia -->
     <!-- ################### -->
@@ -28,21 +13,23 @@
     <!-- ├── description_Aeschynomene_evenia.yml -->
     <!-- └── strains_Aeschynomene_evenia.yml -->
     <source name="aesev-about" type="lis-about" dump="true">
-      <property name="data.set.url" value="https://legumeinfo.org/data/public/Aeschynomene_evenia/about_this_collection/"/>
-      <property name="data.set.description" value="Aeschynomene evenia organism and strain information."/>
-      <property name="src.data.dir" location="/data/LIS/Aeschynomene_evenia/about_this_collection"/>
+      <property name="dataSetName" value="about_Aeschynomene_evenia"/>
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Aeschynomene/evenia/about_this_collection/"/>
+      <property name="dataSetDescription" value="Aeschynomene evenia organism and strain information."/>
+      <property name="src.data.dir" location="/data/v2/Aeschynomene/evenia/about_this_collection"/>
     </source>
 
     <!-- ################################## -->
     <!-- Aeschynomene evenia CIAT22838.gnm1 -->
     <!-- ################################## -->
 
-    <!-- CIAT22838.gnm1.XF73 -->
+    <!-- genomes/CIAT22838.gnm1.XF73 -->
     <!-- ├── aesev.CIAT22838.gnm1.XF73.genome_main.fna -->
-    <source name="aesev.CIAT22838.gnm1-chromosome-fasta" type="lis-fasta" dump="true">
-      <property name="lis-fasta.dataSetDescription" value="LIS datastore genomic FASTA file for Aeschynomene evenia CIAT22838 gnm1"/>
+    <source name="CIAT22838.gnm1.XF73.genome_main" type="lis-fasta" dump="true">
+      <property name="lis-fasta.dataSetTitle" value="aesev.CIAT22838.gnm1.XF73"/>
+      <property name="lis-fasta.dataSetDescription" value="aesev.CIAT22838.gnm1 genome assembly"/>
       <property name="lis-fasta.dataSetVersion" value="gnm1"/>
-      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/public/Aeschynomene_evenia/CIAT22838.gnm1.XF73/"/>
+      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/v2/Aeschynomene/evenia/genomes/CIAT22838.gnm1.XF73/"/>
       <property name="lis-fasta.taxonId" value="561484"/>
       <property name="lis-fasta.strainIdentifier" value="CIAT22838"/>
       <property name="lis-fasta.sequenceType" value="dna"/>
@@ -50,19 +37,16 @@
       <property name="lis-fasta.classAttribute" value="primaryIdentifier"/>
       <property name="lis-fasta.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
       <property name="lis-fasta.includes" value="aesev.CIAT22838.gnm1.XF73.genome_main.fna"/>
-      <property name="src.data.dir" location="/data/LIS/Aeschynomene_evenia/CIAT22838.gnm1.XF73"/>
+      <property name="src.data.dir" location="/data/v2/Aeschynomene/evenia/genomes/CIAT22838.gnm1.XF73"/>
     </source>
 
-    <!-- CIAT22838.gnm1.ann0.ZM3R -->
-    <!-- ├── aesev.CIAT22838.gnm1.ann0.ZM3R.cds_primaryTranscript.fna -->
-    <!-- ├── aesev.CIAT22838.gnm1.ann0.ZM3R.gene_models_main.gff3 -->
-    <!-- ├── aesev.CIAT22838.gnm1.ann0.ZM3R.legfed_v1_0.M65K.gfa.tsv -->
-    <!-- ├── aesev.CIAT22838.gnm1.ann0.ZM3R.protein_primaryTranscript.faa -->
-    <!-- └── aesev.CIAT22838.gnm1.ann0.ZM3R.transcript_primaryTranscript.fna -->
-    <source name="aesev.CIAT22838.gnm1.ann0-cds-fasta" type="lis-fasta" dump="true">
-      <property name="lis-fasta.dataSetDescription" value="CDS models for the aesev.CIAT22838.gnm1 genome"/>
-      <property name="lis-fasta.dataSetVersion" value="gnm1.ann0"/>
-      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/public/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R/"/>
+    <!-- annotations/CIAT22838.gnm1.ann1.ZM3R -->
+    <!-- ├── aesev.CIAT22838.gnm1.ann1.ZM3R.cds.fna -->
+    <source name="CIAT22838.gnm1.ann1.ZM3R.cds" type="lis-fasta" dump="true">
+      <property name="lis-fasta.dataSetTitle" value="CIAT22838.gnm1.ann1.ZM3R"/>
+      <property name="lis-fasta.dataSetDescription" value="aesev.CIAT22838.gnm1.ann1 genome annotation"/>
+      <property name="lis-fasta.dataSetVersion" value="gnm1.ann1"/>
+      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R/"/>
       <property name="lis-fasta.taxonId" value="561484"/>
       <property name="lis-fasta.strainIdentifier" value="CIAT22838"/>
       <property name="lis-fasta.sequenceType" value="dna"/>
@@ -70,31 +54,30 @@
       <property name="lis-fasta.classAttribute" value="primaryIdentifier"/>
       <property name="lis-fasta.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
       <property name="lis-fasta.geneAttribute" value="locus"/>
-      <property name="lis-fasta.includes" value="aesev.CIAT22838.gnm1.ann0.ZM3R.cds_primaryTranscript.fna"/>
-      <property name="src.data.dir" location="/data/LIS/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R"/>
+      <property name="lis-fasta.includes" value="aesev.CIAT22838.gnm1.ann1.ZM3R.cds.fna"/>
+      <property name="src.data.dir" location="/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R"/>
     </source>
-    <source name="aesev.CIAT22838.gnm1.ann0-gff" type="lis-gff" dump="true">
+    <!-- ├── aesev.CIAT22838.gnm1.ann1.ZM3R.gene_models_main.gff3 -->
+    <source name="CIAT22838.gnm1.ann1.ZM3R.gene_models_main" type="lis-gff" dump="true">
       <property name="gff3.dataSourceName" value="LIS Datastore"/>
-      <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/public/"/>
+      <property name="gff3.dataSourceUrl" value="https://legumeinfo.org/data/v2/"/>
       <property name="gff3.dataSourceDescription" value="A collaborative, community resource to facilitate crop improvement by integrating genetic, genomic, and trait data across legume species."/>
-      <property name="gff3.dataSetTitle" value="aesev.CIAT22838.gnm1.ann0.ZM3R.gene_models_main.gff3"/>
-      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/public/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R/"/>
-      <property name="gff3.dataSetDescription" value="Gene model annotation for the aesev.CIAT22838.gnm1 genome"/>
-      <property name="gff3.dataSetVersion" value="gnm1.ann0"/>
+      <property name="gff3.dataSetTitle" value="CIAT22838.gnm1.ann1.ZM3R"/>
+      <property name="gff3.dataSetDescription" value="aesev.CIAT22838.gnm1.ann1 genome annotation"/>
+      <property name="gff3.dataSetVersion" value="gnm1.ann1"/>
+      <property name="gff3.dataSetUrl" value="https://legumeinfo.org/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R/"/>
+      <property name="gff3.dataSetVersion" value="gnm1.ann1"/>
       <property name="gff3.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
       <property name="gff3.taxonId" value="561484"/>
       <property name="gff3.strainIdentifier" value="CIAT22838"/>
-      <property name="src.data.dir" location="/data/LIS/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R"/>
+      <property name="src.data.dir" location="/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R"/>
     </source>
-    <!-- <source name="aesev.CIAT22838.gnm1.ann0-info-annot" type="lis-info-annot" dump="true">  -->
-    <!--   <property name="data.set.url" value="https://legumeinfo.org/data/public/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R/"/> -->
-    <!--   <property name="data.set.description" value="Aeschynomene evenia gene, protein and mRNA ontology annotations."/> -->
-    <!--   <property name="src.data.dir" location="/data/LIS/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R"/> -->
-    <!-- </source> -->
-    <source name="aesev.CIAT22838.gnm1.ann0-protein-fasta" type="lis-fasta" dump="true">
-      <property name="lis-fasta.dataSetDescription" value="Protein models for the aesev.CIAT22838.gnm1 genome"/>
-      <property name="lis-fasta.dataSetVersion" value="gnm1.ann0"/>
-      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/public/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R/"/>
+    <!-- ├── aesev.CIAT22838.gnm1.ann1.ZM3R.protein.faa -->
+    <source name="CIAT22838.gnm1.ann1.ZM3R.protein" type="lis-fasta" dump="true">
+      <property name="lis-fasta.dataSetTitle" value="CIAT22838.gnm1.ann1.ZM3R"/>
+      <property name="lis-fasta.dataSetDescription" value="aesev.CIAT22838.gnm1.ann1 genome annotation"/>
+      <property name="lis-fasta.dataSetVersion" value="gnm1.ann1"/>
+      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R/"/>
       <property name="lis-fasta.taxonId" value="561484"/>
       <property name="lis-fasta.strainIdentifier" value="CIAT22838"/>
       <property name="lis-fasta.sequenceType" value="protein"/>
@@ -102,13 +85,15 @@
       <property name="lis-fasta.classAttribute" value="primaryIdentifier"/>
       <property name="lis-fasta.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
       <property name="lis-fasta.geneAttribute" value="locus"/>
-      <property name="lis-fasta.includes" value="aesev.CIAT22838.gnm1.ann0.ZM3R.protein_primaryTranscript.faa"/>
-      <property name="src.data.dir" location="/data/LIS/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R"/>
+      <property name="lis-fasta.includes" value="aesev.CIAT22838.gnm1.ann1.ZM3R.protein.faa"/>
+      <property name="src.data.dir" location="/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R"/>
     </source>
-    <source name="aesev.CIAT22838.gnm1.ann0-mrna-fasta" type="lis-fasta" dump="true">
-      <property name="lis-fasta.dataSetDescription" value="mRNA models for the aesev.CIAT22838.gnm1 genome"/>
-      <property name="lis-fasta.dataSetVersion" value="gnm1.ann0"/>
-      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/public/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R/"/>
+    <!-- └── aesev.CIAT22838.gnm1.ann1.ZM3R.transcript.fna -->
+    <source name="CIAT22838.gnm1.ann1.ZM3R.transcript" type="lis-fasta" dump="true">
+      <property name="lis-fasta.dataSetTitle" value="CIAT22838.gnm1.ann1.ZM3R"/>
+      <property name="lis-fasta.dataSetDescription" value="aesev.CIAT22838.gnm1.ann1 genome annotation"/>
+      <property name="lis-fasta.dataSetVersion" value="gnm1.ann1"/>
+      <property name="lis-fasta.dataSetUrl" value="https://legumeinfo.org/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R/"/>
       <property name="lis-fasta.taxonId" value="561484"/>
       <property name="lis-fasta.strainIdentifier" value="CIAT22838"/>
       <property name="lis-fasta.sequenceType" value="dna"/>
@@ -116,23 +101,50 @@
       <property name="lis-fasta.classAttribute" value="primaryIdentifier"/>
       <property name="lis-fasta.licence" value="ODC Public Domain Dedication and Licence (PDDL)"/>
       <property name="lis-fasta.geneAttribute" value="locus"/>
-      <property name="lis-fasta.includes" value="aesev.CIAT22838.gnm1.ann0.ZM3R.transcript_primaryTranscript.fna"/>
-      <property name="src.data.dir" location="/data/LIS/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R"/>
+      <property name="lis-fasta.includes" value="aesev.CIAT22838.gnm1.ann1.ZM3R.transcript.fna"/>
+      <property name="src.data.dir" location="/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R"/>
     </source>
-    <source name="aesev.CIAT22838.gnm1.ann0-ipr-gff" type="lis-ipr-gff" dump="true">
-      <property name="data.set.url" value="https://legumeinfo.org/data/public/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R/"/>
-      <property name="data.set.description" value="InterPro scan results for aesev.CIAT22838.gnm1."/>
-      <property name="src.data.dir" location="/data/LIS/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R"/>
+    <!-- ├── aesev.CIAT22838.gnm1.ann1.ZM3R.iprscan.gff3 -->
+    <source name="CIAT22838.gnm1.ann1.ZM3R.iprscan" type="lis-ipr-gff" dump="true">
+      <property name="dataSetName" value="CIAT22838.gnm1.ann1.ZM3R"/>
+      <property name="dataSetDescription" value="aesev.CIAT22838.gnm1.ann1 genome annotation"/>
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R/"/>
+      <property name="src.data.dir" location="/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R"/>
     </source>
-    <source name="aesev.CIAT22838.gnm1.ann0-gfa" type="lis-gfa" dump="true"> 
-      <property name="data.set.url" value="https://legumeinfo.org/data/public/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R/"/>
-      <property name="data.set.description" value="Gene family assignments for aesev.CIAT22838.gnm1 genes and proteins"/>
-      <property name="src.data.dir" location="/data/LIS/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R"/>
+    <!-- ├── aesev.CIAT22838.gnm1.ann1.ZM3R.legfed_v1_0.M65K.gfa.tsv -->
+    <source name="CIAT22838.gnm1.ann1.ZM3R.legfed_v1_0.M65K.gfa" type="lis-gfa" dump="true"> 
+      <property name="dataSetName" value="CIAT22838.gnm1.ann1.ZM3R"/>
+      <property name="dataSetDescription" value="aesev.CIAT22838.gnm1.ann1 genome annotation"/>
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R/"/>
+      <property name="src.data.dir" location="/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R"/>
     </source>
-    <source name="aesev.CIAT22838.gnm1.ann0-pathway" type="lis-pathway" dump="true">
-      <property name="data.set.url" value="https://legumeinfo.org/data/public/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R/"/>
-      <property name="data.set.description" value="Plant Reactome pathways for aesev.CIAT22838.gnm1 genes interpreted from gene family membership with Arachis duranensis and ipaensis genes"/>
-      <property name="src.data.dir" location="/data/LIS/Aeschynomene_evenia/CIAT22838.gnm1.ann0.ZM3R"/>
+    <!-- ├── aesev.CIAT22838.gnm1.ann1.ZM3R.legfed_v1_0.M65K.pathway.tsv -->
+    <source name="CIAT22838.gnm1.ann1.ZM3R.legfed_v1_0.M65K.pathway" type="lis-pathway" dump="true">
+      <property name="dataSetName" value="CIAT22838.gnm1.ann1.ZM3R"/>
+      <property name="dataSetDescription" value="aesev.CIAT22838.gnm1.ann1 genome annotation"/>
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R/"/>
+      <property name="src.data.dir" location="/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R"/>
+    </source>
+
+    <!-- ############# -->
+    <!-- GENE FAMILIES -->
+    <!-- ############# -->
+    
+    <!-- genefamilies/legume.genefam.fam1.M65K -->
+    <source name="legume.genefam.fam1.M65K" type="lis-genefamily" dump="true">
+      <property name="dataSetName" value="legume.genefam.fam1.M65K"/>
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/LEGUMES/Fabaceae/genefamiles/legume.genefam.fam1.M65K/"/>
+      <property name="dataSetDescription" value="LIS fam1 gene families"/>
+      <property name="desired.organisms" value="aradu araip arahy arath cajca cicar cucsa glyma glyso lotja lupan medtr phalu phavu prupe solly tripr vigan vigra vigun vitvi"/>
+      <property name="src.data.dir" location="/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K"/>
+    </source>
+
+    <!-- genefamilies/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted -->
+    <source name="legume.genefam.fam1.M65K.trees_ML_rooted" type="lis-phylotree" dump="true">
+      <property name="dataSetName" value="legume.genefam.fam1.M65K"/>
+      <property name="dataSetUrl" value="https://legumeinfo.org/data/v2/LEGUMES/Fabaceae/genefamiles/legume.genefam.fam1.M65K/"/>
+      <property name="dataSetDescription" value="LIS fam1 gene families and phylotree"/>
+      <property name="src.data.dir" location="/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted"/>
     </source>
 
     <!-- ############### -->
@@ -202,11 +214,6 @@
     <post-process name="create-gene-flanking-features"/>
 
     <!-- LIS -->
-    <post-process name="lis-populate-cds-gene-references" />
-    <post-process name="lis-populate-cds-protein-references" />
-    <post-process name="lis-populate-cds-transcript-references" />
-    <post-process name="lis-populate-transcript-gene-references" />
-    <post-process name="lis-populate-transcript-protein-references" />
     <post-process name="lis-populate-gene-protein-collections" />
     <post-process name="lis-populate-qtl-gene-collections" />
     <post-process name="lis-populate-protein-pathway-collections" />

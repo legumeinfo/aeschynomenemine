@@ -9,46 +9,31 @@ echo "##########################################################################
 echo ""
 
 ## ontologies
-./gradlew integrate -Psource=so --stacktrace
-./gradlew integrate -Psource=go --stacktrace
-./gradlew integrate -Psource=plant-ontology --stacktrace
-./gradlew integrate -Psource=plant-trait-ontology --stacktrace
+./gradlew --stacktrace integrate -Psource=so
+./gradlew --stacktrace integrate -Psource=go
+./gradlew --stacktrace integrate -Psource=plant-ontology
+./gradlew --stacktrace integrate -Psource=plant-trait-ontology
 
 ## InterPro
-./gradlew integrate -Psource=interpro --stacktrace
-./gradlew integrate -Psource=interpro-go --stacktrace
+./gradlew --stacktrace integrate -Psource=interpro
+./gradlew --stacktrace integrate -Psource=interpro-go
 
 ## LIS gene families and phylotree
-./gradlew integrate -Psource=lis.fam1-genefamily --stacktrace
-./gradlew integrate -Psource=lis.fam1-phylotree --stacktrace
+./gradlew --stacktrace integrate -Psource=lis.fam1-genefamily
+./gradlew --stacktrace integrate -Psource=lis.fam1-phylotree
 
-## about
-./gradlew integrate -Psource=aesev-about --stacktrace
 
-## chromosome-fasta
-./gradlew integrate -Psource=aesev.CIAT22838.gnm1-chromosome-fasta --stacktrace
+## aesev about
+./gradlew --stacktrace integrate -Psource=aesev-about
 
-## cds-fasta
-./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-cds-fasta --stacktrace
+## aesev.CIAT22838.gnm1
+./gradlew --stacktrace integrate -Psource=CIAT22838.gnm1.XF73.genome_main
+./gradlew --stacktrace integrate -Psource=CIAT22838.gnm1.ann1.ZM3R.cds
+./gradlew --stacktrace integrate -Psource=CIAT22838.gnm1.ann1.ZM3R.gene_models_main
+./gradlew --stacktrace integrate -Psource=CIAT22838.gnm1.ann1.ZM3R.protein
+./gradlew --stacktrace integrate -Psource=CIAT22838.gnm1.ann1.ZM3R.transcript
+./gradlew --stacktrace integrate -Psource=CIAT22838.gnm1.ann1.ZM3R.iprscan
+./gradlew --stacktrace integrate -Psource=CIAT22838.gnm1.ann1.ZM3R.legfed_v1_0.M65K.gfa
+./gradlew --stacktrace integrate -Psource=CIAT22838.gnm1.ann1.ZM3R.legfed_v1_0.M65K.pathway
 
-## mrna-fasta
-./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-mrna-fasta --stacktrace
-
-## protein-fasta
-./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-protein-fasta --stacktrace
-
-## info-annot
-#./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-info-annot --stacktrace
-
-## ann-gff
-./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-gff --stacktrace
-
-## ann-gfa
-./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-gfa --stacktrace
-
-## ann-pathway
-./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-pathway --stacktrace
-
-## ipr-gff
-./gradlew integrate -Psource=aesev.CIAT22838.gnm1.ann0-ipr-gff --stacktrace
 
