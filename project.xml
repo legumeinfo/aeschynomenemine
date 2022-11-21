@@ -1,7 +1,7 @@
 <project type="bio">
   <property name="target.model" value="genomic"/>
   <property name="common.os.prefix" value="common"/>
-  <property name="intermine.properties.file" value="jointvetchmine.properties"/>
+  <property name="intermine.properties.file" value="aeschynomenemine.properties"/>
   <property name="default.intermine.properties.file" location="../default.intermine.integrate.properties"/>
   <sources>
 
@@ -14,10 +14,10 @@
     </source>
 
     <!-- Aeschynomene/evenia/genomes/CIAT22838.gnm1.XF73 -->
-    <source name="CIAT22838.gnm1.XF73" type="lis-fasta" dump="true">
+    <source name="CIAT22838.gnm1.XF73" type="lis-genome" dump="true">
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Aeschynomene/evenia/genomes/CIAT22838.gnm1.XF73/" />
-      <property name="lis-fasta.className" value="org.intermine.model.bio.Chromosome" />
-      <property name="lis-fasta.includes" value="README.CIAT22838.gnm1.XF73.yml,aesev.CIAT22838.gnm1.XF73.genome_main.fna.gz" />
+      <property name="lis-genome.className" value="org.intermine.model.bio.Chromosome" />
+      <property name="lis-genome.includes" value="README.CIAT22838.gnm1.XF73.yml,aesev.CIAT22838.gnm1.XF73.genome_main.fna.gz" />
       <property name="src.data.dir" location="/data/v2/Aeschynomene/evenia/genomes/CIAT22838.gnm1.XF73"/>
     </source>
 
@@ -27,38 +27,32 @@
       <property name="src.data.dir" location="/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R"/>
     </source>
 
-    <!-- ############### -->
-    <!-- ONTOLOGIES ETC. -->
-    <!-- ############### -->
+    <!-- ######################### ONTOLOGIES etc. ######################### -->
     
-    <!-- LIS gene families -->
-    <source name="legume.genefam.fam1.M65K" type="lis-genefamily" dump="true">
-      <property name="dataSetName" value="legume.genefam.fam1.M65K"/>
-      <property name="dataSetUrl" value="https://data.legumeinfo.org/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/" />
-      <property name="dataSetDescription" value="LIS gene families"/>
-      <property name="src.data.dir" location="/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K"/>
-    </source>
-
-    <!-- LIS gene family trees -->
-    <source name="legume.genefam.fam1.M65K.trees_ML_rooted" type="lis-phylotree" dump="true">
-      <property name="dataSetName" value="legume.genefam.fam1.M65K.trees_ML_rooted"/>
-      <property name="dataSetUrl" value="https://data.legumeinfo.org/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted/" />
-      <property name="dataSetDescription" value="LIS gene family phylogenetic trees"/>
-      <property name="src.data.dir" location="/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted"/>
-    </source>
-
-    <!-- INTERPRO -->
+    <!-- InterPro -->
     <source name="interpro" type="interpro">
       <property name="data.source.name" value="InterPro"/>
       <property name="data.source.description" value="XML file listing each InterPro entry."/>
       <property name="data.source.url" value="ftp://ftp.ebi.ac.uk/pub/databases/interpro/"/>
       <property name="src.data.dir" location="/data/InterPro/"/>
     </source>
+
+    <!-- InterPro2GO -->
     <source name="interpro-go" type="interpro-go">
       <property name="data.source.name" value="InterPro2GO"/>
       <property name="data.source.description" value="Mappings of InterPro entries to Gene Ontology (GO) terms."/>
       <property name="data.source.url" value="ftp://ftp.ebi.ac.uk/pub/databases/interpro/"/>
       <property name="src.data.dir" location="/data/InterPro/ontology/"/>
+    </source>
+
+    <!-- Pfam terms -->
+    <source name="pfam-term" type="pfam-term">
+      <property name="src.data.dir" location="/data/Pfam/"/>
+    </source>
+
+    <!-- PANTHER terms -->
+    <source name="panther-term" type="panther-term">
+      <property name="src.data.dir" location="/data/PANTHER/"/>
     </source>
 
     <!-- gene ontology -->
@@ -91,13 +85,26 @@
       <property name="obo.ontology.description" value="A controlled vocabulary of describe phenotypic traits in plants."/>
     </source>
 
+    <!-- LIS gene families -->
+    <source name="legume.genefam.fam1.M65K" type="lis-genefamily" dump="true">
+      <property name="dataSetName" value="legume.genefam.fam1.M65K"/>
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/" />
+      <property name="dataSetDescription" value="LIS gene families"/>
+      <property name="src.data.dir" location="/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K"/>
+    </source>
+
+    <!-- LIS gene family trees -->
+    <source name="legume.genefam.fam1.M65K.trees_ML_rooted" type="lis-phylotree" dump="true">
+      <property name="dataSetName" value="legume.genefam.fam1.M65K.trees_ML_rooted"/>
+      <property name="dataSetUrl" value="https://data.legumeinfo.org/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted/" />
+      <property name="dataSetDescription" value="LIS gene family phylogenetic trees"/>
+      <property name="src.data.dir" location="/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/legume.genefam.fam1.M65K.trees_ML_rooted"/>
+    </source>
+
   </sources>
 
-  <!-- ############### -->
-  <!-- post-processing -->
-  <!-- ############### -->
-  
   <post-processing>
+
     <!-- IM CORE -->
     <post-process name="do-sources" />
     <post-process name="create-utr-references"/>
@@ -110,9 +117,9 @@
     <post-process name="create-gene-flanking-features"/>
 
     <!-- LIS -->
-    <post-process name="lis-create-genefamilytally" />
     <post-process name="lis-populate-publications" />
-
+    <post-process name="lis-create-genefamilytally" />
+    
     <!-- VIEWS AND INDEXES -->
     <post-process name="create-location-overlap-index" />
     <post-process name="create-overlap-view" />
@@ -120,6 +127,7 @@
     <post-process name="summarise-objectstore" />
     <post-process name="create-autocomplete-index" />
     <post-process name="create-search-index" />
+
   </post-processing>
 
 </project>
