@@ -31,10 +31,10 @@ subprojects {
         mavenLocal()
         jcenter()
         maven {
-	    url 'https://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/'
+            url 'https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/' 
         }
         maven {
-            url 'https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/' 
+	    url 'https://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/'
         }
     }
 
