@@ -7,10 +7,10 @@
 
     <!-- Aeschynomene/evenia/about_this_collection -->
     <source name="Aeschynomene-evenia-description" type="lis-description" dump="true" >
-      <property name="dataSetName" value="Aeschynomene/evenia/about_this_collection" />
+      <property name="dataSetName" value="Aeschynomene-evenia-description" />
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Aeschynomene/evenia/about_this_collection/" />
       <property name="dataSetDescription" value="Aeschynomene evenia organism and strain information." />
-      <property name="src.data.dir" location="/data/v2/Aeschynomene/evenia/about_this_collection" />
+      <property name="src.data.dir" location="/home/shokin/data/v2/Aeschynomene/evenia/about_this_collection" />
     </source>
 
     <!-- Aeschynomene/evenia/genomes/CIAT22838.gnm1.XF73 -->
@@ -18,13 +18,13 @@
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Aeschynomene/evenia/genomes/CIAT22838.gnm1.XF73/" />
       <property name="lis-genome.className" value="org.intermine.model.bio.Chromosome" />
       <property name="lis-genome.includes" value="README.CIAT22838.gnm1.XF73.yml,aesev.CIAT22838.gnm1.XF73.genome_main.fna.gz" />
-      <property name="src.data.dir" location="/data/v2/Aeschynomene/evenia/genomes/CIAT22838.gnm1.XF73"/>
+      <property name="src.data.dir" location="/home/shokin/data/v2/Aeschynomene/evenia/genomes/CIAT22838.gnm1.XF73"/>
     </source>
 
     <!-- Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R -->
     <source name="CIAT22838.gnm1.ann1.ZM3R" type="lis-annotation" dump="true">
       <property name="dataSetUrl" value="https://data.legumeinfo.org/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R/" />
-      <property name="src.data.dir" location="/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R"/>
+      <property name="src.data.dir" location="/home/shokin/data/v2/Aeschynomene/evenia/annotations/CIAT22838.gnm1.ann1.ZM3R"/>
     </source>
 
     <!-- ######################### ONTOLOGIES etc. ######################### -->
@@ -34,7 +34,7 @@
       <property name="data.source.name" value="InterPro"/>
       <property name="data.source.description" value="XML file listing each InterPro entry."/>
       <property name="data.source.url" value="ftp://ftp.ebi.ac.uk/pub/databases/interpro/"/>
-      <property name="src.data.dir" location="/data/InterPro/"/>
+      <property name="src.data.dir" location="/home/shokin/data/InterPro/"/>
     </source>
 
     <!-- InterPro2GO -->
@@ -42,32 +42,32 @@
       <property name="data.source.name" value="InterPro2GO"/>
       <property name="data.source.description" value="Mappings of InterPro entries to Gene Ontology (GO) terms."/>
       <property name="data.source.url" value="ftp://ftp.ebi.ac.uk/pub/databases/interpro/"/>
-      <property name="src.data.dir" location="/data/InterPro/ontology/"/>
+      <property name="src.data.dir" location="/home/shokin/data/InterPro/ontology/"/>
     </source>
 
     <!-- Pfam terms -->
     <source name="pfam-term" type="pfam-term">
-      <property name="src.data.dir" location="/data/Pfam/"/>
+      <property name="src.data.dir" location="/home/shokin/data/Pfam/"/>
     </source>
 
     <!-- PANTHER terms -->
     <source name="panther-term" type="panther-term">
-      <property name="src.data.dir" location="/data/PANTHER/"/>
+      <property name="src.data.dir" location="/home/shokin/data/PANTHER/"/>
     </source>
 
     <!-- gene ontology -->
     <source name="go" type="go">
-      <property name="src.data.file" location="/data/gene-ontology/go-basic.obo"/>
+      <property name="src.data.file" location="/home/shokin/data/gene-ontology/go-basic.obo"/>
     </source>
 
     <!-- sequence ontology -->
     <source name="so" type="so">
-      <property name="src.data.file" location="/data/SO-Ontologies/Ontology_Files/so-simple.obo"/>
+      <property name="src.data.file" location="/home/shokin/data/SO-Ontologies/Ontology_Files/so-simple.obo"/>
     </source>
 
     <!-- plant ontology -->
     <source name="plant-ontology" type="obo">
-      <property name="src.data.file" location="/data/plant-ontology/po.obo"/>
+      <property name="src.data.file" location="/home/shokin/data/plant-ontology/po.obo"/>
       <property name="ontology.prefix" value="PO"/>
       <property name="obo.ontology.name" value="Plant Ontology"/>
       <property name="obo.ontology.url" value="http://planteome.org/"/>
@@ -77,7 +77,7 @@
 
     <!-- plant trait ontology -->
     <source name="plant-trait-ontology" type="obo">
-      <property name="src.data.file" location="/data/plant-trait-ontology/to.obo"/>
+      <property name="src.data.file" location="/home/shokin/data/plant-trait-ontology/to.obo"/>
       <property name="ontology.prefix" value="TO"/>
       <property name="obo.ontology.name" value="Plant Trait Ontology"/>
       <property name="obo.ontology.url" value="http://www.obofoundry.org/ontology/to.html"/>
@@ -88,13 +88,13 @@
     <!-- LIS gene families -->
     <source name="legume.genefam.fam1.M65K" type="lis-genefamily" dump="true">
       <property name="dataSetUrl" value="https://data.legumeinfo.org/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/" />
-      <property name="src.data.dir" location="/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K"/>
+      <property name="src.data.dir" location="/home/shokin/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K"/>
     </source>
 
     <!-- LIS gene family trees -->
     <source name="legume.genefam.fam1.M65K.trees_ML_rooted" type="lis-phylotree" dump="true">
       <property name="dataSetUrl" value="https://data.legumeinfo.org/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K/" />
-      <property name="src.data.dir" location="/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K"/>
+      <property name="src.data.dir" location="/home/shokin/data/v2/LEGUMES/Fabaceae/genefamilies/legume.genefam.fam1.M65K"/>
     </source>
 
   </sources>
