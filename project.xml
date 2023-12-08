@@ -113,6 +113,7 @@
     <post-process name="transfer-sequences"/>
 
     <!-- LIS -->
+    <post-process name="lis-remove-orphans"/>
     <post-process name="lis-create-genefamilytally" />
     
     <!-- VIEWS AND INDEXES -->
